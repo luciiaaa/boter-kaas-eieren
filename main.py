@@ -1,6 +1,7 @@
 from bke import MLAgent, is_winner, opponent, start
- 
- 
+
+
+
 class MyAgent(MLAgent):
     def evaluate(self, board):
         if is_winner(board, self.symbol):
