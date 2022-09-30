@@ -1,4 +1,4 @@
-from bke import MLAgent, is_winner, opponent, start
+from bke import MLAgent, is_winner, opponent, start, AnderSpeler, MakkelijkSpel, MoelijkSpel, Grafiek, TrainOnly  
 
 
 
@@ -44,3 +44,11 @@ def main ():
     print("probeer opnieuw")
     main()
 
+def TrainOnly()
+   my_agent = MyAgent()
+   my_agent = load('MyAgent_3000')
+   my_agent.learning = False
+main()
+
+
+if 
