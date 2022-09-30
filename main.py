@@ -1,8 +1,7 @@
-from bke import MLAgent, is_winner, opponent, start, AnderSpeler, MakkelijkSpel, MoelijkSpel, Grafiek, TrainOnly  
-
-
-
-	class MyAgent(MLAgent):
+from bke import MLAgent, is_winner, opponent, train, save
+ 
+ 
+class MyAgent(MLAgent):
     def evaluate(self, board):
         if is_winner(board, self.symbol):
             reward = 1
@@ -18,43 +17,3 @@ my_agent = MyAgent()
 train(my_agent, 3000)
  
 save(my_agent, 'MyAgent_3000')
-
-
-def main ():
-  print("Kies je spel")
-  print()
-
-  choice = input("""
-                    A: Tegen een ander speler
-                    B: Makkelijk spel
-                    C: Moeilijk spel
-                    D: Plot de grafiek
-                    E: Train de tegenstander
-                    
-                    
-                    Maak een keuze: """)
-  if choice == "A" or choice == "a":
-    AnderSpeler()
-  elif choice == "B" or choice == "b":
-    MakkelijkSpel()
-  elif choice == "C" or choice == "c":
-    MoelijkSpel()
-  elif choice == "D" or choice == "d":
-    Grafiek()
-  elif choice == "E" or choice == "e":
-    TrainOnly()
-  else:
-    print("kies tussen A, B, C of D")
-    print("probeer opnieuw")
-    main()
-
-def MakkelijkSpel():
-   random_agent = RandomAgent()
-
-def AnderSpeler():
-  
-def Grafiek():
-
-def TrainOnly():
-
-def MoeilijkSpel():
