@@ -83,6 +83,4 @@ def MoeilijkSpel():
    
   start(player_x=my_agent)
 
-
-
-
+main()
