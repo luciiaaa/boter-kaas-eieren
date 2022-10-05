@@ -2,7 +2,7 @@ import random
 
 from bke import start,load, MLAgent, is_winner, opponent, train, save, RandomAgent, train_and_plot
  
- # het trainen van de agent
+ 
 class MyAgent(MLAgent):
     def evaluate(self, board):
         if is_winner(board, self.symbol):
@@ -47,7 +47,7 @@ def main ():
     main()
 
 
-# de functies van de soorten spel 
+ 
 def AnderSpeler():
   start()  
 
@@ -78,7 +78,11 @@ def TrainOnly():
   train(my_agent, 3000)
    
   save(my_agent, 'MyAgent_3000')
-  start(player_x=my_agent)
+  
+
+  print()
+  print("Het is gelukt!")
+  print("Je tegenstander is getraind")
       
 
 def MoeilijkSpel():  
