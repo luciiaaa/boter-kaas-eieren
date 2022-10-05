@@ -46,14 +46,26 @@ def main ():
     print("Probeer opnieuw")
     main()
 
+def again():
+ print()
+ again = input("Wil je verder spelen? Ja of Nee?")
+ if again == "ja" or "Ja" or "JA":
+   print()
+   main()
 
+ else:
+   print()
+   print("Tot ziens!")
+   quit()
  
 def AnderSpeler():
   start()  
+  again()
 
 def MakkelijkSpel():
   random_agent = RandomAgent()
   start(player_o = random_agent)
+  again()
 
 def Grafiek():
   random.seed(1)
@@ -70,7 +82,7 @@ def Grafiek():
     trainings=100,
     validations=1000)
 
-
+  again()
 
 def TrainOnly():
   my_agent = MyAgent()
@@ -83,6 +95,8 @@ def TrainOnly():
   print()
   print("Het is gelukt!")
   print("Je tegenstander is getraind")
+  
+  again()
       
 
 def MoeilijkSpel():  
@@ -91,4 +105,19 @@ def MoeilijkSpel():
    
   start(player_x=my_agent)
 
+  again()
+
 main()
+
+
+def again():
+ print()
+ again = input("Wil je verder spelen? Ja of Nee?")
+ if again == "ja" or "Ja" or "JA":
+   print()
+   main()
+
+ else:
+   print()
+   print("Tot ziens!")
+   quit()
